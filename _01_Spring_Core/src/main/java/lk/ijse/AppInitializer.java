@@ -25,7 +25,7 @@ public class AppInitializer {
         /*3.Runtime.getRuntime().addShutdownHook(new Thread(){
             @Override
             public void run(){
-                System.out.println("Shutting down");
+                System.out.println("Shutting down");6
                 context.close();
             }
         });*/
