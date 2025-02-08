@@ -12,7 +12,14 @@
         <option value="$PROJECT_DIR$/_06_RunTime_Value_Injection/pom.xml" />
         <option value="$PROJECT_DIR$/_07_Spring_Environment/pom.xml" />
         <option value="$PROJECT_DIR$/_08_Spring_Web_MVC/pom.xml" />
+        <option value="$PROJECT_DIR$/_09_Rest_Controller/pom.xml" />
+        <option value="$PROJECT_DIR$/_10_Back_ENd/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/_09_Rest_Controller/src/main/java/lk/ijse/_10_Back_End/pom.xml" />
+      </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Customer Management</h2>
+    <form id="customerForm">
+        <div class="mb-3">
+            <label for="id" class="form-label">ID</label>
+            <input type="text" class="form-control" id="id" name="id">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" name="age">
+        </div>
+        <div class="mb-3">
+            <label for="profilePic" class="form-label">Profile Pic</label>
+            <input type="file" class="form-control" id="profilePic" name="profilePic">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="saveCustomer()">Save</button>
+        <button type="button" class="btn btn-warning" onclick="updateCustomer()">Update</button>
+        <button type="button" class="btn btn-danger" onclick="deleteCustomer()">Delete</button>
+    </form>
+    <h3 class="mt-5">All Customers</h3>
+    <table class="table table-bordered mt-3">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Profile Pic</th>
+        </tr>
+        </thead>
+        <tbody id="customerTableBody">
+        <!-- Customer rows will be added here dynamically -->
+        </tbody>
+    </table>
+</div>
+<script src="js/bootstrap.js"></script>
+<script>
+    function saveCustomer() {
+        // Implement save functionality
+    }
+
+    function updateCustomer() {
+        // Implement update functionality
+    }
+
+    function deleteCustomer() {
+        // Implement delete functionality
+    }
+
+    function getAllCustomers() {
+        // Implement get all customers functionality
+    }
+
+    // Call getAllCustomers on page load
+    window.onload = getAllCustomers;
+</script>
+
+</body>
+</html>

@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="_03_Spring_Dependency_Injection" />
         <module name="_08_Spring_Web_MVC" />
+        <module name="_10_Back_ENd" />
         <module name="_07_Spring_Environment" />
         <module name="_02_Spring_Bean_LifeCycle" />
         <module name="_01_Spring_Core" />
         <module name="_06_RunTime_Value_Injection" />
+        <module name="_09_Rest_Controller" />
         <module name="_05_Configuration" />
         <module name="_04_FullMode_Vs_LightMode" />
       </profile>
