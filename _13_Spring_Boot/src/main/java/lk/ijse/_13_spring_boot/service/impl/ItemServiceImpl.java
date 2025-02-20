@@ -1,0 +1,46 @@
+package lk.ijse._13_spring_boot.service.impl;
+
+import lk.ijse._13_spring_boot.dto.ItemDTO;
+import lk.ijse._13_spring_boot.entity.Item;
+import lk.ijse._13_spring_boot.repository.ItemRepo;
+import lk.ijse._13_spring_boot.service.ItemService;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ItemServiceImpl implements ItemService {
+    @Autowired
+    private ItemRepo itemRepo;
+    @Autowired
+    private ModelMapper modelMapper;
+
+    @Override
+    public void addItem(ItemDTO itemDTO) {
+        if (itemRepo.existsById(itemDTO.getCode())){
+            throw new RuntimeException("Item already exists");
+        }
+        itemRepo.save(modelMapper.map(itemDTO, Item.class));
+    }
+    @Override
+    public void deleteItem(int id) {
+        if (!itemRepo.existsById(id)){
+            throw new RuntimeException("Item does not exist");
+        }
+        itemRepo.deleteById(id);
+    }
+    @Override
+    public void updateItem(ItemDTO itemDTO) {
+        if (itemRepo.existsById(itemDTO.getCode())){
+            itemRepo.save(modelMapper.map(itemDTO, Item.class));
+        }
+        throw new RuntimeException("Item does not exist");
+    }
+    @Override
+    public List<ItemDTO> getAllItems() {
+        return modelMapper.map(itemRepo.findAll(), new TypeToken<List<ItemDTO>>(){}.getType());
+    }
+}

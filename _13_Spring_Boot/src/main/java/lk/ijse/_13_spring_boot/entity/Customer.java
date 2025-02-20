@@ -2,20 +2,14 @@ package lk.ijse._13_spring_boot.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 @Entity
 public class Customer {
     @Id
     private int id;
-
     private String name;
     private String address;
-
-    public Customer() {
-    }
-
+    public Customer() {}
     public Customer(int id, String name, String address) {
         this.id = id;
         this.name = name;

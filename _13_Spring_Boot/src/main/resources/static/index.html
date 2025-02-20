@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .form-container {
+            width: 40%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .table-container {
+            width: 55%;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        .save-btn { background-color: #28a745; }
+        .save-btn:hover { background-color: #218838; }
+        .update-btn { background-color: #ffc107; }
+        .update-btn:hover { background-color: #e0a800; }
+        .delete-btn { background-color: #dc3545; }
+        .delete-btn:hover { background-color: #c82333; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            width: 32%;
+        }
+        tr.selected {
+            background-color: #d1ecf1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Customer Form</h2>
+        <form id="customerForm">
+            <label>ID</label>
+            <input type="text" id="id" required>
+            <label>Name</label>
+            <input type="text" id="name" required>
+            <label>Address</label>
+            <input type="text" id="address" required>
+
+            <div class="buttons">
+                <button type="button" class="save-btn" onclick="saveCustomer()">Save</button>
+                <button type="button" class="update-btn" onclick="updateCustomer()">Update</button>
+                <button type="button" class="delete-btn" onclick="deleteCustomer()">Delete</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>Customer List</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody id="customerTableBody">
+            <!-- Customers will be added here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    let selectedRow = null;
+
+    function saveCustomer() {
+        const id = document.getElementById('id').value.trim();
+        const name = document.getElementById('name').value.trim();
+        const address = document.getElementById('address').value.trim();
+
+        if (!id || !name || !address) {
+            alert('Please fill all fields');
+            return;
+        }
+
+        const tableBody = document.getElementById('customerTableBody');
+        const row = tableBody.insertRow();
+
+        row.insertCell(0).innerText = id;
+        row.insertCell(1).innerText = name;
+        row.insertCell(2).innerText = address;
+
+        row.onclick = () => selectRow(row);
+
+        document.getElementById('customerForm').reset();
+    }
+
+    function selectRow(row) {
+        if (selectedRow) {
+            selectedRow.classList.remove('selected');
+        }
+
+        selectedRow = row;
+        row.classList.add('selected');
+
+        document.getElementById('id').value = row.cells[0].innerText;
+        document.getElementById('name').value = row.cells[1].innerText;
+        document.getElementById('address').value = row.cells[2].innerText;
+    }
+
+    function updateCustomer() {
+        if (!selectedRow) {
+            alert('Please select a customer to update.');
+            return;
+        }
+
+        selectedRow.cells[0].innerText = document.getElementById('id').value.trim();
+        selectedRow.cells[1].innerText = document.getElementById('name').value.trim();
+        selectedRow.cells[2].innerText = document.getElementById('address').value.trim();
+
+        alert('Customer updated successfully!');
+        document.getElementById('customerForm').reset();
+        selectedRow.classList.remove('selected');
+        selectedRow = null;
+    }
+
+    function deleteCustomer() {
+        if (!selectedRow) {
+            alert('Please select a customer to delete.');
+            return;
+        }
+
+        if (confirm('Are you sure you want to delete this customer?')) {
+            selectedRow.remove();
+            alert('Customer deleted successfully!');
+            document.getElementById('customerForm').reset();
+            selectedRow = null;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,8 +1,10 @@
 package lk.ijse._13_spring_boot.controller;
 
 import lk.ijse._13_spring_boot.dto.CustomerDTO;
-import lk.ijse._13_spring_boot.service.CustomerService;
+import lk.ijse._13_spring_boot.service.impl.CustomerServiceImpl;
+import lk.ijse._13_spring_boot.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,34 +12,29 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/customer")
 public class CustomerController {
+    //property injection
     @Autowired
-    private CustomerService customerService;
-
-   /*@PostMapping(path = "save")
-   public String getCustomer(@RequestBody CustomerDTO customerDTO){
-       System.out.println(customerDTO.getName());
-       return "customerDTO";
-   }*/
+    private CustomerServiceImpl customerService;
 
     @PostMapping(path = "save")
-    public Boolean getCustomer(@RequestBody CustomerDTO customerDTO) {
-        boolean res = customerService.save(customerDTO);
-        System.out.println(customerDTO.getName());
-        return res;
+    public ResponseUtil getCustomer(@RequestBody CustomerDTO customerDTO) {
+        customerService.saveCustomer(customerDTO);
+        return new ResponseUtil(201,"Customer is saved",null);
+    }
+    @GetMapping(path ="getAll")
+    public ResponseUtil getAllCustomers() {
+        return new ResponseUtil(200, "success", customerService.getAllCustomers());
     }
 
-    @GetMapping(path = "/get")
-    public List<CustomerDTO> getAllCustomers(){
-        return customerService.getAll();
+    @PutMapping(path = "update")
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
+        customerService.updateCustomer(customerDTO);
+        return new ResponseUtil(200,"Customer is updated",null);
+    }
+    @DeleteMapping(path = "delete/{id}")
+    public ResponseUtil deleteCustomer(@PathVariable("id") int id) {
+        customerService.deleteCustomer(id);
+        return new ResponseUtil(200,"Customer is deleted",null);
     }
 
-    @DeleteMapping(path = "/delete/{id}")
-    public boolean deleteCustomer(@PathVariable int id){
-        return customerService.delete(id);
-    }
-
-    @PutMapping(path = "/update")
-    public boolean updateCustomer(@RequestBody CustomerDTO customerDTO){
-        return customerService.update(customerDTO);
-    }
 }
