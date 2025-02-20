@@ -6,43 +6,40 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 @RequestMapping("api/v1/customer")
 public class CustomerController {
-
     private List<CustomerDTO> customers = new ArrayList<>();
-
-    @PostMapping("save")
+    @PostMapping(path = "save")
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO) {
         customers.add(customerDTO);
         return customerDTO;
     }
-
     @PutMapping("update")
     public CustomerDTO updateCustomer(@RequestBody CustomerDTO customerDTO) {
         for (int i = 0; i < customers.size(); i++) {
-            CustomerDTO existingCustomer = customers.get(i);
-            if(existingCustomer.getId().equals(customerDTO.getId())) {
-                existingCustomer.setName(customerDTO.getName());
-                existingCustomer.setAddress(customerDTO.getAddress());
-                existingCustomer.setAge(customerDTO.getAge());
-                return existingCustomer;
+            CustomerDTO excitingCustomer = customers.get(i);
+            if (excitingCustomer.getId().equals(customerDTO.getId())){
+                excitingCustomer.setName(customerDTO.getName());
+                excitingCustomer.setAddress(customerDTO.getAddress());
+                excitingCustomer.setAge(customerDTO.getAge());
+                return excitingCustomer;
             }
+
         }
         return customerDTO;
     }
 
-    @GetMapping("getAll")
-    public List<CustomerDTO> getAllCustomers() {
-        List<CustomerDTO> customerDTOList = new ArrayList<>();
+    @GetMapping(path = "getAll")
+    public List<CustomerDTO> getAllCustomers(){
         return customers;
     }
-
     @DeleteMapping(path = "delete/{id}")
-    public boolean deleteCustomer(@PathVariable(value = "id")String id) {
+    public boolean deleteCustomer(@PathVariable (value = "id")String id){
         for (int i = 0; i < customers.size(); i++) {
-            CustomerDTO existingCustomer = customers.get(i);
-            if(existingCustomer.getId().equals(id)) {
+            CustomerDTO excitingCustomer = customers.get(i);
+            if (excitingCustomer.getId().equals(id)){
                 customers.remove(i);
                 return true;
             }

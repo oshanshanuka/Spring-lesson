@@ -1,25 +1,31 @@
-package lk.ijse.dto;
+package lk.ijse._13_spring_boot.entity;
 
-public class CustomerDTO {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Entity
+public class Customer {
+    @Id
     private int id;
+
     private String name;
     private String address;
 
-    private int age;
+    public Customer() {
+    }
 
-
-
-    public CustomerDTO() {}
-    public CustomerDTO(int id,String name, String address, int age) {
+    public Customer(int id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
-        this.age = age;
     }
 
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -27,19 +33,16 @@ public class CustomerDTO {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
-            this.address = address;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
-        this.age = age;
+        this.address = address;
     }
 }
