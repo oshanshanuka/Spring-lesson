@@ -48,4 +48,8 @@ public class Item {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public int getQtyOnHand() {
+        return 0;
+    }
 }

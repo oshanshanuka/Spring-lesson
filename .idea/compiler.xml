@@ -7,17 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="_03_Spring_Dependency_Injection" />
-        <module name="_08_Spring_Web_MVC" />
         <module name="_10_Back_ENd" />
         <module name="_07_Spring_Environment" />
-        <module name="_02_Spring_Bean_LifeCycle" />
-        <module name="_12_Spring_Data_JPA" />
-        <module name="_01_Spring_Core" />
         <module name="_06_RunTime_Value_Injection" />
         <module name="_09_Rest_Controller" />
+        <module name="_16_Spring_Boot_Loggins" />
         <module name="_05_Configuration" />
         <module name="_04_FullMode_Vs_LightMode" />
+        <module name="_03_Spring_Dependency_Injection" />
+        <module name="_08_Spring_Web_MVC" />
+        <module name="_15_Spring_boot_Bean_Validation" />
+        <module name="_02_Spring_Bean_LifeCycle" />
+        <module name="_12_Spring_Data_JPA" />
+        <module name="z14_Spirng_Security" />
+        <module name="_01_Spring_Core" />
       </profile>
       <profile name="Annotation profile for _13_Spring_Boot" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -29,10 +32,17 @@
         <module name="_13_Spring_Boot" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_14_Spring_Security" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="_13_Spring_Boot" options="-parameters" />
+      <module name="_14_Spring_Security" options="-parameters" />
+      <module name="_15_Spring_boot_Bean_Validation" options="-parameters" />
+      <module name="_16_Spring_Boot_Loggins" options="-parameters" />
+      <module name="z14_Spirng_Security" options="-parameters" />
     </option>
   </component>
 </project>

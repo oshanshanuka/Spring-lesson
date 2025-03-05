@@ -1,0 +1,62 @@
+2025-03-05T11:47:34.269+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Starting Application using Java 17.0.11 with PID 10656 (C:\Users\HP\IdeaProjects\Spring-Framework\_16_Spring_Boot_Loggins\target\classes started by Oshan in C:\Users\HP\IdeaProjects\Spring-Framework)
+2025-03-05T11:47:34.285+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T11:47:37.561+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-05T11:47:37.594+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-05T11:47:37.596+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-05T11:47:37.731+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-05T11:47:37.733+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3186 ms
+2025-03-05T11:47:38.708+05:30  WARN 10656 --- [_16_Spring_Boot_Loggins] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-05T11:47:38.745+05:30  INFO 10656 --- [_16_Spring_Boot_Loggins] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-05T11:47:38.796+05:30 ERROR 10656 --- [_16_Spring_Boot_Loggins] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-03-05T11:48:21.534+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Starting Application using Java 17.0.11 with PID 9656 (C:\Users\HP\IdeaProjects\Spring-Framework\_16_Spring_Boot_Loggins\target\classes started by Oshan in C:\Users\HP\IdeaProjects\Spring-Framework)
+2025-03-05T11:48:21.543+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T11:48:24.118+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-05T11:48:24.156+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-05T11:48:24.157+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-05T11:48:24.289+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-05T11:48:24.290+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2589 ms
+2025-03-05T11:48:25.541+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-05T11:48:25.564+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Started Application in 5.362 seconds (process running for 6.989)
+2025-03-05T11:49:39.966+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-05T11:49:40.536+05:30  INFO 9656 --- [_16_Spring_Boot_Loggins] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-05T11:49:47.067+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Starting Application using Java 17.0.11 with PID 12976 (C:\Users\HP\IdeaProjects\Spring-Framework\_16_Spring_Boot_Loggins\target\classes started by Oshan in C:\Users\HP\IdeaProjects\Spring-Framework)
+2025-03-05T11:49:47.080+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T11:49:49.819+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-05T11:49:49.854+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-05T11:49:49.855+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-05T11:49:50.055+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-05T11:49:50.056+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2627 ms
+2025-03-05T11:49:51.283+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-05T11:49:51.307+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Started Application in 5.59 seconds (process running for 7.197)
+2025-03-05T11:50:03.258+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-05T11:50:03.477+05:30  INFO 12976 --- [_16_Spring_Boot_Loggins] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-05T11:50:10.198+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Starting Application using Java 17.0.11 with PID 12340 (C:\Users\HP\IdeaProjects\Spring-Framework\_16_Spring_Boot_Loggins\target\classes started by Oshan in C:\Users\HP\IdeaProjects\Spring-Framework)
+2025-03-05T11:50:10.207+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T11:50:12.668+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-05T11:50:12.706+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-05T11:50:12.708+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-05T11:50:12.866+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-05T11:50:12.868+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2507 ms
+2025-03-05T11:50:13.899+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-05T11:50:13.934+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [main] l.i._16_spring_boot_loggins.Application  : Started Application in 5.115 seconds (process running for 6.698)
+2025-03-05T11:53:59.609+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-05T11:53:59.610+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-05T11:53:59.614+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-05T11:54:09.704+05:30  INFO 12340 --- [_16_Spring_Boot_Loggins] [http-nio-8080-exec-2] l.i._.controller.DemoController          :  This is ainfo
+2025-03-05T11:54:09.705+05:30  WARN 12340 --- [_16_Spring_Boot_Loggins] [http-nio-8080-exec-2] l.i._.controller.DemoController          :  This is awarn
+2025-03-05T11:54:09.709+05:30 ERROR 12340 --- [_16_Spring_Boot_Loggins] [http-nio-8080-exec-2] l.i._.controller.DemoController          : This is aerror

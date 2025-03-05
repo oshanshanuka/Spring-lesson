@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/_15_Sping_Boot_Bean_Validation" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -16,11 +19,16 @@
         <option value="$PROJECT_DIR$/_10_Back_ENd/pom.xml" />
         <option value="$PROJECT_DIR$/_12_Spring_Data_JPA/pom.xml" />
         <option value="$PROJECT_DIR$/_13_Spring_Boot/pom.xml" />
+        <option value="$PROJECT_DIR$/_14_Spring_Security/pom.xml" />
+        <option value="$PROJECT_DIR$/z14_Spirng_Security/pom.xml" />
+        <option value="$PROJECT_DIR$/_15_Spring_boot_Bean_Validation/pom.xml" />
+        <option value="$PROJECT_DIR$/_16_Spring_Boot_Loggins/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/_09_Rest_Controller/src/main/java/lk/ijse/_10_Back_End/pom.xml" />
+        <option value="$PROJECT_DIR$/_14_Spring_Security/pom.xml" />
       </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
